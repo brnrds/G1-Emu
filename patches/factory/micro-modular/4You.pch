@@ -1,0 +1,80 @@
+[Header]
+Version=Nord Modular patch 3.0
+0 127 0 127 1 0 0 5 4000 2 0 0 1 1 1 1 1 1 1 1 1 1 1 
+[/Header]
+[ModuleDump]
+1 1 1 0 0 
+2 62 1 22 
+3 96 1 2 
+4 20 1 8 
+5 92 1 14 
+6 4 1 32 
+7 47 1 26 
+8 28 1 30 
+11 27 0 14 
+12 28 0 16 
+[/ModuleDump]
+[CurrentNoteDump]
+64 64 64 64 64 64 64 64 64 64 64 64 64 64 64 64 0 0 
+[/CurrentNoteDump]
+[CableDump]
+1 0 2 0 0 5 0 1 
+1 3 1 0 12 0 1 
+0 4 0 0 3 0 1 
+2 4 1 0 1 1 1 
+1 5 0 0 4 0 1 
+1 5 1 0 11 0 1 
+0 5 2 0 4 1 1 
+0 6 0 0 7 0 1 
+0 6 1 0 7 1 1 
+0 7 0 0 2 0 1 
+1 7 1 0 8 0 1 
+[/CableDump]
+[ParameterDump]
+1 
+2 62 2 0 98 
+3 96 7 52 64 1 0 42 0 0 
+4 20 6 0 32 88 44 73 0 
+5 92 7 44 65 37 56 0 1 0 
+6 4 3 115 0 0 
+7 47 2 36 64 
+8 28 1 88 
+11 27 1 75 
+12 28 1 64 
+[/ParameterDump]
+[MorphMapDump]
+0 17 0 0 
+1 2 0 1 96 1 3 6 1 29 1 4 1 0 -55 1 4 3 0 62 1 4 4 1 35 1 5 2 0 65 1 5 3 0 0 1 5 4 1 34 
+[/MorphMapDump]
+[KeyboardAssignment]
+1 0 0 0 
+[/KeyboardAssignment]
+[KnobMapDump]
+1 3 4 0 
+1 5 0 1 
+2 1 1 2 
+[/KnobMapDump]
+[CtrlMapDump]
+1 8 0 1 
+[/CtrlMapDump]
+[CustomDump]
+1 
+3 1 0 
+5 1 0 
+8 1 0 
+11 1 0 
+12 1 0 
+[/CustomDump]
+[NameDump]
+1 
+1 Keyboard
+2 Overdrive1
+3 FormantOsc1
+4 ADSR-Env1
+5 FilterF1
+6 2 outputs1
+7 Pan1
+8 LFOSlvC1
+11 LFOSlvB1
+12 LFOSlvC2
+[/NameDump]

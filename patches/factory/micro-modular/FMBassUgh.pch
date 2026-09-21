@@ -1,0 +1,93 @@
+[Header]
+Version=Nord Modular patch 3.0
+0 127 0 127 1 0 0 1 4000 2 1 0 1 1 1 1 1 1 1 1 1 1 1 
+[/Header]
+[ModuleDump]
+1 1 9 0 0 
+2 13 0 4 
+3 4 2 32 
+5 20 1 0 
+6 20 1 8 
+7 20 1 16 
+8 13 0 8 
+9 44 1 6 
+11 44 2 4 
+13 43 2 0 
+14 66 2 2 
+15 81 2 6 
+16 63 0 16 
+[/ModuleDump]
+[CurrentNoteDump]
+64 64 64 62 84 64 
+[/CurrentNoteDump]
+[CableDump]
+1 0 1 0 0 9 0 1 
+3 2 0 0 1 1 1 
+3 8 0 0 2 0 0 
+0 2 1 0 7 1 1 
+0 3 0 0 15 0 1 
+0 3 1 0 3 0 0 
+0 5 0 0 1 0 1 
+0 6 0 0 2 0 1 
+0 7 0 0 8 0 1 
+2 7 1 0 16 1 1 
+2 6 1 0 7 1 0 
+2 5 1 0 6 1 0 
+1 8 1 0 16 2 1 
+1 9 0 0 16 2 1 
+1 14 0 0 16 2 1 
+0 9 1 0 6 1 1 
+1 11 0 0 14 0 1 
+0 11 1 0 5 1 1 
+1 14 1 0 13 0 1 
+0 15 0 0 11 0 1 
+[/CableDump]
+[ParameterDump]
+1 
+1 9 6 40 64 1 127 35 0 
+2 13 4 64 64 94 0 
+3 4 3 122 0 0 
+5 20 6 2 35 103 1 68 0 
+6 20 6 2 17 110 12 64 0 
+7 20 6 0 21 37 0 44 0 
+8 13 4 88 64 0 0 
+9 44 1 0 
+11 44 1 0 
+13 43 2 68 0 
+14 66 5 0 127 0 127 0 
+15 81 1 104 
+[/ParameterDump]
+[MorphMapDump]
+0 0 0 0 
+1 1 4 0 27 1 2 2 0 26 1 5 1 0 -21 1 6 2 0 -25 
+[/MorphMapDump]
+[KeyboardAssignment]
+1 0 0 0 
+[/KeyboardAssignment]
+[KnobMapDump]
+1 1 4 2 
+1 6 1 1 
+1 7 1 0 
+[/KnobMapDump]
+[CustomDump]
+1 
+1 1 0 
+2 1 0 
+8 1 0 
+[/CustomDump]
+[NameDump]
+1 
+1 OscC1
+2 OscSlvE1
+3 2 outputs1
+5 ADSR-Env1
+6 ADSR-Env2
+7 ADSR-Env3
+8 OscSlvE2
+9 GainControl1
+11 GainControl2
+13 Constant1
+14 ControlMixer1
+15 Amplifier1
+16 KeyboardPatch
+[/NameDump]

@@ -7,6 +7,8 @@ Older entries cite their commit by hand.
 
 ## 2026-09-21
 
+- **macOS Monterey 12.7.6 Intel bring-up: local env doc, factory presets, launchers, Clavia updater tool (Cursor agent, macOS session).** Documented this machine's MacPorts/Xcode/CMake Release build (`-DG1_BACKEND=juce`, Gearmulator at `~/src/gearmulator-md-mm`, JUCE and NME paths under `~/Development/Animatek-NME`) in `docs/local-environment.md` for humans and agents; ROM stays gitignored and is validated with `g1Lib/g1rom.h` rules, with official Clavia updater packages kept under `Roms/official-updater/` as reference only. Added 211 electro-music factory `.pch` files under `patches/factory/` for editor upload tests. Added `tools/extract_clavia_update.py` to unpack Clavia updater payloads for analysis. Fixed `g1gui.sh` to launch the macOS `.app` bundle (`Contents/MacOS/G1-Emu`) when present and marked `g1.sh`/`g1gui.sh` executable. Runtime on this Mac: CoreAudio Built-in Output, CoreMIDI virtual **G1-Emu** ports (PC Port + MIDI). **Known issue:** Animatek NME reports no synth response when the PC Port reply truncates the **IAm** SysEx (7 bytes observed vs 12 expected); investigation points to PC Port TX firing before the complete SysEx is assembled. Verification: built Release on macOS Monterey Intel 4 GB RAM; `./g1gui.sh` starts the panel; audio and virtual MIDI ports appear; factory patches present for manual NME upload trials.
+
 - **The window shows the PC Port byte counters (Claude, from the first macOS report).** The
   status bar named the two MIDI ports, which is the one thing you can already see in the editor.
   It now prints `PC Port in/out` and `MIDI in/out` live, because when an editor says "no response

@@ -1,0 +1,141 @@
+[Header]
+Version=Nord Modular patch 3.0
+0 127 0 127 2 0 0 8 400 2 1 1 1 1 1 1 1 0 0 1 1 1 1 
+[/Header]
+[ModuleDump]
+1 1 96 0 0 
+2 107 0 4 
+3 19 0 9 
+4 51 0 14 
+5 4 0 30 
+6 20 0 22 
+7 1 0 20 
+8 84 0 11 
+9 94 0 27 
+10 28 1 2 
+11 28 1 7 
+12 39 1 18 
+13 44 1 4 
+14 44 1 9 
+15 4 1 30 
+16 47 1 24 
+[/ModuleDump]
+[ModuleDump]
+0 2 127 0 0 
+3 62 1 0 
+4 4 3 0 
+5 21 0 2 
+1 104 2 0 
+6 103 2 4 
+7 104 2 8 
+[/ModuleDump]
+[CurrentNoteDump]
+60 60 60 51 18 1 55 17 22 60 30 62 56 51 27 62 44 36 55 36 9 50 34 46 53 24 29 
+[/CurrentNoteDump]
+[CableDump]
+1 0 5 0 0 16 1 1 
+0 16 0 0 6 1 1 
+0 9 0 0 16 0 1 
+0 15 1 0 9 1 1 
+0 15 0 0 9 0 1 
+0 2 1 0 14 0 1 
+0 1 0 0 13 0 1 
+1 14 1 0 11 0 1 
+1 13 1 0 10 0 1 
+1 14 0 0 12 0 1 
+1 13 0 0 14 0 0 
+2 12 0 0 7 1 1 
+2 8 0 0 7 1 1 
+2 6 1 0 7 1 1 
+1 4 0 0 7 2 1 
+1 8 2 0 7 2 1 
+1 4 3 0 8 0 1 
+0 6 0 0 4 0 1 
+0 4 2 0 3 0 1 
+0 3 1 0 2 0 1 
+0 3 0 0 1 0 1 
+[/CableDump]
+[CableDump]
+0 0 3 0 0 5 0 1 
+0 5 0 0 2 0 1 
+0 4 0 0 7 0 1 
+0 4 1 0 4 0 0 
+0 7 0 0 6 0 1 
+0 6 0 0 1 0 1 
+0 1 0 0 3 0 1 
+[/CableDump]
+[ParameterDump]
+1 
+1 96 7 64 67 1 0 5 10 0 
+2 107 10 64 61 64 1 11 0 0 0 1 0 
+3 19 3 127 111 127 
+4 51 10 0 1 30 76 64 0 0 1 38 0 
+5 4 3 127 2 0 
+6 20 6 0 0 103 6 17 0 
+8 84 3 0 83 0 
+9 94 3 69 76 1 
+10 28 1 96 
+11 28 1 91 
+12 39 1 124 
+13 44 1 0 
+14 44 1 0 
+15 4 3 127 0 0 
+16 47 2 0 0 
+[/ParameterDump]
+[ParameterDump]
+0 
+1 104 5 45 92 0 0 127 
+2 127 1 1 
+3 62 2 0 80 
+4 4 3 104 0 0 
+5 21 9 0 20 18 20 30 12 0 0 0 
+6 103 5 76 78 64 0 127 
+7 104 5 106 68 1 0 127 
+[/ParameterDump]
+[MorphMapDump]
+99 0 0 0 
+1 16 1 0 127 
+[/MorphMapDump]
+[KnobMapDump]
+0 1 1 15 
+0 6 1 16 
+0 7 1 17 
+2 1 0 0 
+[/KnobMapDump]
+[CustomDump]
+1 
+1 1 0 
+2 1 0 
+4 1 0 
+10 1 0 
+11 1 0 
+[/CustomDump]
+[NameDump]
+1 
+1 Leander
+2 SpectralOsc1
+3 Mixer1
+4 FilterE1
+5 2 outputs1
+6 ADSR-Env1
+7 Keyboard1
+8 AD-Env1
+9 StChorus1
+10 LFOSlvC1
+11 LFOSlvC2
+12 Smooth1
+13 GainControl1
+14 GainControl2
+15 2 outputs2
+16 Clean <-> Dist
+[/NameDump]
+[NameDump]
+0 
+1 EQ Lo
+2 PolyAreaIn1
+3 Overdrive1
+4 2 outputs1
+5 Compressor1
+6 EQ Mid
+7 EQ Hi
+[/NameDump]

@@ -1,0 +1,96 @@
+[Header]
+Version=Nord Modular patch 3.0
+0 127 0 127 1 0 0 32 362 2 1 0 1 1 1 1 1 1 1 1 1 1 1 
+[/Header]
+[ModuleDump]
+1 
+1 1 0 0 
+2 5 1 21 
+3 7 1 2 
+4 51 1 8 
+5 20 1 14 
+6 20 0 14 
+7 24 0 8 
+[/ModuleDump]
+[ModuleDump]
+0 
+1 4 1 3 
+2 94 1 0 
+3 127 0 0 
+[/ModuleDump]
+[CurrentNoteDump]
+45 1 38 57 38 26 54 46 28 45 1 38 64 0 0 64 0 0 64 0 0 64 0 0 64 0 0 64 0 0 64 0 0 64 0 0 64 0 0 64 0 0 64 0 0 64 0 0 64 0 0 64 0 0 64 0 0 64 0 0 64 0 0 64 0 0 64 0 0 64 0 0 64 0 0 64 0 0 64 0 0 64 0 0 64 0 0 64 0 0 64 0 0 64 0 0 64 0 0 
+[/CurrentNoteDump]
+[CableDump]
+1 
+1 6 0 1 7 0 0 
+2 1 1 1 7 1 0 
+2 1 1 1 6 1 0 
+2 1 1 1 5 1 0 
+0 4 0 1 5 0 0 
+0 3 0 1 4 2 0 
+1 7 1 1 4 0 0 
+1 7 1 1 3 1 0 
+0 5 1 1 2 0 0 
+[/CableDump]
+[CableDump]
+0 
+0 2 0 1 1 0 0 
+0 2 1 1 1 1 0 
+0 3 0 1 2 0 0 
+[/CableDump]
+[ParameterDump]
+1 
+2 5 3 127 4 0 
+3 7 10 64 64 64 64 2 0 0 0 0 0 
+4 51 10 0 0 17 81 64 0 0 0 0 0 
+5 20 6 0 58 103 127 101 0 
+6 20 6 0 86 101 0 100 0 
+7 24 8 38 2 0 127 0 0 64 0 
+[/ParameterDump]
+[ParameterDump]
+0 
+1 4 3 127 0 0 
+2 94 3 55 117 0 
+3 127 1 1 
+[/ParameterDump]
+[KnobMapDump]
+1 3 7 6 
+1 4 2 9 
+1 4 3 1 
+1 4 6 4 
+1 5 1 8 
+1 5 2 11 
+1 5 3 14 
+1 5 4 17 
+1 6 1 7 
+1 6 2 10 
+1 6 3 13 
+1 6 4 16 
+1 7 0 2 
+1 7 3 5 
+[/KnobMapDump]
+[CustomDump]
+0 
+[/CustomDump]
+[CustomDump]
+1 
+3 1 0 
+4 1 0 
+[/CustomDump]
+[NameDump]
+1 
+1 Coti K. 1999
+2 1 output1
+3 OscA1
+4 FilterE1
+5 AMP ENV
+6 LFO speed ENV
+7 LFOA1
+[/NameDump]
+[NameDump]
+0 
+1 2 outputs1
+2 StereoChorus1
+3 PolyAreaIn1
+[/NameDump]

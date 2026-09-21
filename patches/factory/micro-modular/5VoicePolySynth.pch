@@ -1,0 +1,81 @@
+[Header]
+Version=Nord Modular patch 3.0
+0 127 0 127 1 0 0 5 4000 2 1 0 1 1 1 1 1 1 1 1 1 1 1 
+[/Header]
+[ModuleDump]
+1 1 107 0 0 
+2 85 0 6 
+3 19 0 10 
+4 20 0 18 
+5 1 0 16 
+6 84 1 6 
+7 4 0 24 
+8 84 1 10 
+9 66 1 16 
+10 28 1 2 
+11 28 1 0 
+12 66 1 4 
+[/ModuleDump]
+[CurrentNoteDump]
+64 64 64 53 1 64 57 16 64 64 8 64 60 25 64 52 38 64 
+[/CurrentNoteDump]
+[CableDump]
+1 1 1 2 0 11 0 1 
+1 1 3 0 12 0 1 
+3 2 0 0 1 1 1 
+1 2 1 0 9 0 1 
+0 3 0 0 1 0 1 
+0 8 1 0 1 0 1 
+0 9 1 0 1 0 1 
+0 3 1 0 2 0 1 
+0 4 0 0 3 0 1 
+2 4 1 0 5 1 1 
+2 8 0 0 5 1 1 
+2 6 0 0 8 0 0 
+0 7 1 0 4 1 1 
+0 7 0 0 7 1 0 
+0 9 0 0 8 1 1 
+1 12 0 0 6 0 1 
+1 12 1 0 10 0 1 
+[/CableDump]
+[ParameterDump]
+1 
+1 107 10 64 64 59 1 0 12 0 37 1 0 
+2 85 5 64 69 0 81 0 
+3 19 3 91 82 127 
+4 20 6 1 49 77 127 64 0 
+6 84 3 0 108 0 
+7 4 3 127 0 0 
+8 84 3 16 77 0 
+9 66 5 0 127 0 29 0 
+10 28 1 64 
+11 28 1 95 
+12 66 5 0 101 0 44 0 
+[/ParameterDump]
+[KnobMapDump]
+1 1 7 0 
+1 2 3 1 
+1 4 4 2 
+[/KnobMapDump]
+[CustomDump]
+1 
+1 1 0 
+2 1 0 
+10 1 0 
+11 1 0 
+[/CustomDump]
+[NameDump]
+1 
+1 Leander
+2 OscSlvFM1
+3 Mixer1
+4 ADSR-Env1
+5 Keyboard
+6 AD-Env1
+7 2 outputs1
+8 AD-Env2
+9 ControlMixer1
+10 LFOSlvC1
+11 LFOSlvC2
+12 ControlMixer2
+[/NameDump]

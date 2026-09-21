@@ -1,0 +1,183 @@
+[Header]
+Version=Nord Modular patch 3.0
+0 127 0 127 1 0 0 1 4000 2 1 0 1 1 1 1 1 1 1 1 1 1 1 
+[/Header]
+[ModuleDump]
+1 
+1 2 0 0 
+2 4 0 4 
+3 86 0 24 
+4 86 0 16 
+5 87 0 12 
+6 21 1 0 
+7 86 0 14 
+8 87 0 10 
+9 21 1 8 
+10 87 0 20 
+11 21 1 16 
+12 19 2 24 
+13 87 0 22 
+14 86 0 26 
+15 19 2 26 
+16 105 2 0 
+17 105 2 8 
+18 105 2 16 
+19 79 1 26 
+20 79 1 30 
+21 87 0 32 
+22 87 0 30 
+23 21 2 28 
+[/ModuleDump]
+[ModuleDump]
+0 
+[/ModuleDump]
+[CurrentNoteDump]
+64 0 0 64 64 64 
+[/CurrentNoteDump]
+[CableDump]
+1 
+0 2 0 0 23 0 1 
+0 2 1 0 23 1 1 
+0 3 0 0 13 0 1 
+0 4 0 0 1 0 1 
+0 5 0 0 1 0 1 
+0 8 0 0 1 0 1 
+0 19 1 0 1 0 1 
+0 6 0 0 8 0 1 
+0 6 1 0 10 0 1 
+0 7 0 0 5 0 1 
+0 9 0 0 7 0 1 
+0 9 1 0 3 0 1 
+0 10 0 0 1 1 1 
+0 13 0 0 1 1 1 
+0 14 0 0 1 1 1 
+0 20 1 0 1 1 1 
+0 11 0 0 22 0 1 
+0 11 1 0 21 0 1 
+0 12 0 0 16 0 1 
+0 12 1 0 17 0 1 
+0 12 2 0 18 0 1 
+0 15 0 0 16 1 1 
+0 15 1 0 17 1 1 
+0 15 2 0 18 1 1 
+0 16 0 0 6 0 1 
+0 16 1 0 6 1 1 
+0 17 0 0 9 0 1 
+0 17 1 0 9 1 1 
+0 18 0 0 11 0 1 
+0 18 1 0 11 1 1 
+0 19 0 0 12 0 1 
+0 20 0 0 15 0 1 
+0 21 0 0 14 0 1 
+0 22 0 0 4 0 1 
+0 23 0 0 19 0 1 
+0 23 1 0 20 0 1 
+[/CableDump]
+[CableDump]
+0 
+[/CableDump]
+[ParameterDump]
+1 
+2 4 3 127 0 0 
+3 86 1 95 
+4 86 1 56 
+5 87 1 56 
+6 21 9 9 40 12 14 30 24 0 0 0 
+7 86 1 95 
+8 87 1 95 
+9 21 9 9 40 12 16 30 24 0 0 0 
+10 87 1 95 
+11 21 9 8 36 16 15 30 24 0 0 0 
+12 19 3 127 127 127 
+13 87 1 56 
+14 86 1 56 
+15 19 3 127 127 127 
+16 105 9 12 40 49 19 30 0 0 0 0 
+17 105 9 12 40 49 19 31 0 0 0 0 
+18 105 9 12 40 49 19 43 0 0 0 0 
+19 79 6 0 127 127 127 127 0 
+20 79 6 0 127 127 127 127 0 
+21 87 1 9 
+22 87 1 9 
+23 21 9 13 48 42 0 30 20 0 0 0 
+[/ParameterDump]
+[ParameterDump]
+0 
+[/ParameterDump]
+[CustomDump]
+1 
+[/CustomDump]
+[CustomDump]
+0 
+[/CustomDump]
+[NameDump]
+1 
+1 AUDIO IN
+2 AUDIO OUT
+3 MID Right
+4 LOW Left
+5 MID Left
+6 COMP HI
+7 MID Left
+8 HI Left
+9 COMP MID
+10 HI Right
+11 COMP LOW
+12 MIX L (HML)
+13 MID Right
+14 LOW Right
+15 MIX R (HML)
+16 EXPANDER HI
+17 EXPANDER MID
+18 EXPANDER LOW
+19 BYPASS Left
+20 BYPASS Right
+21 LOWCUT Right
+22 LOWCUT Left
+23 L&R LIMITER
+[/NameDump]
+[NameDump]
+0 
+[/NameDump]
+[Notes]
+This is a patch which works as a 3-band stereo compressor with noise gates. The
+patch can be used to give a nice face-lift to your master mix.
+
+To begin with there is a Left and a Right filter section. Here you set the three band
+ranges for each channel. Each band is then routed to a Stereo Compressor and
+Stereo Expander section (the Expanders work as noise gates). The three different
+stereo bands are then mixed and routed to a master&quot; Stereo Compressor (works
+only as Limiter here).
+
+By switching between 1 and 2 on the two BYPASS switches, you can compare the
+processed and bypassed signal of each stereo channel. '1' is processed and '2' is
+bypassed signal. As you adjust the parameters in the patch, it's a good idea to
+frequently switch and compare processed and bypassed signals until you have
+reached the desired right-in-your-face sound.
+
+Some hints: Adjust the Threshold values of the Expander modules to eliminate any
+input noise. Try adding, for example, two (one for each channel) Overdrive modules
+after the EXPANDER HI module to add more treble to the processed sound.
+___________________________________________________________________
+
+V2.1 Audio In mastering patch 990318:
+
+Have you ever used your Nord Modular or Micro Modular as an audio processor for
+external signals? To show an example of what you can do, we have created a patch
+which works as a 3-band stereo compressor with noise gates. This patch can be used
+to give a nice "face-lift" to your master mix.
+
+To begin with there is a left and a right filter section. Here you set the three band
+ranges for each channel. Each band is then routed to a stereo COMPRESSOR and
+stereo EXPANDER section (the expanders work as noise gates). The three different
+stereo bands are then mixed and routed to a "master" stereo COMPRESSOR (works
+only as limiter here).
+
+As you adjust the parameters in the patch, it's quite easy to compress the sound too
+much. Therefore, it's a good idea to frequently compare processed signals with
+unprocessed signals. By switching between '1' and '2' on the two BYPASS switches,
+you can compare the processed and unprocessed signal of each stereo channel. '1' is
+processed signal and '2' is unprocessed (bypassed) signal.
+___________________________________________________________________
+
+[/Notes]

@@ -1,0 +1,59 @@
+[Header]
+Version=Nord Modular patch 3.0
+0 127 0 127 1 0 0 1 4000 2 1 0 1 1 1 1 1 1 1 1 1 1 1 
+[/Header]
+[ModuleDump]
+1 1 108 1 6 
+2 2 1 0 
+3 105 1 24 
+4 4 1 32 
+5 87 1 4 
+6 87 0 12 
+7 31 0 10 
+8 94 1 20 
+9 19 1 18 
+[/ModuleDump]
+[CurrentNoteDump]
+64 64 64 64 64 64 
+[/CurrentNoteDump]
+[CableDump]
+1 0 1 0 0 5 0 1 
+0 1 1 0 6 0 1 
+0 3 0 0 8 0 1 
+0 3 1 0 8 1 1 
+0 4 0 0 3 0 1 
+0 4 1 0 3 1 1 
+0 5 0 0 2 0 1 
+0 9 1 0 2 0 1 
+0 6 0 0 7 0 1 
+0 8 0 0 9 0 1 
+0 9 0 0 1 0 1 
+[/CableDump]
+[ParameterDump]
+1 
+1 108 19 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 126 1 0 
+3 105 9 0 0 55 20 0 0 0 0 0 
+4 4 3 127 0 0 
+5 87 1 28 
+6 87 1 41 
+7 31 1 0 
+8 94 3 71 74 0 
+9 19 3 127 0 127 
+[/ParameterDump]
+[KnobMapDump]
+1 5 0 1 
+1 7 0 0 
+1 9 1 2 
+[/KnobMapDump]
+[NameDump]
+1 
+1 Vocoder1
+2 AudioIn
+3 Expander1
+4 2 outputs1
+5 FilterB1
+6 FilterB2
+7 Noise1
+8 StereoChorus1
+9 Mixer1
+[/NameDump]

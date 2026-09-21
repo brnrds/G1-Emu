@@ -1,0 +1,76 @@
+[Header]
+Version=Nord Modular patch 3.0
+0 127 0 127 1 0 0 1 4000 2 1 0 1 1 1 1 1 1 1 1 1 1 1 
+[/Header]
+[ModuleDump]
+1 1 24 0 0 
+2 80 0 6 
+3 80 0 10 
+4 18 1 16 
+6 50 2 8 
+7 4 2 16 
+8 8 1 0 
+9 8 1 8 
+10 94 2 12 
+30 75 1 6 
+31 75 1 14 
+[/ModuleDump]
+[CurrentNoteDump]
+64 64 64 64 0 0 
+[/CurrentNoteDump]
+[CableDump]
+1 3 2 0 0 1 0 1 
+3 3 0 0 2 0 0 
+1 2 1 0 1 1 1 
+1 3 1 0 2 1 0 
+1 4 2 0 1 1 1 
+0 4 0 0 8 0 1 
+0 4 1 0 9 0 1 
+0 6 0 0 4 0 1 
+0 7 0 0 10 0 1 
+0 7 1 0 10 1 1 
+1 8 1 0 30 0 1 
+1 9 1 0 31 0 1 
+0 10 0 0 6 1 1 
+1 30 0 0 2 0 1 
+1 31 0 0 3 0 1 
+[/CableDump]
+[ParameterDump]
+1 
+1 24 8 25 1 1 0 1 0 64 0 
+2 80 5 64 96 2 1 0 
+3 80 5 64 32 2 1 0 
+4 18 2 64 64 
+6 50 3 60 93 1 
+7 4 3 127 0 0 
+8 8 9 64 64 0 2 127 0 0 0 0 
+9 8 9 64 64 0 2 127 0 0 0 0 
+10 94 3 14 42 0 
+30 75 2 24 1 
+31 75 2 24 1 
+[/ParameterDump]
+[KnobMapDump]
+1 7 0 0 
+[/KnobMapDump]
+[CustomDump]
+1 
+2 1 0 
+3 1 0 
+6 1 0 
+8 1 0 
+9 1 0 
+[/CustomDump]
+[NameDump]
+1 
+1 LFOA1
+2 LFOSlvA1
+3 LFOSlvA2
+4 X-Fade1
+6 FilterC1
+7 2 outputs1
+8 OscB2
+9 OscB3
+10 Unison1
+30 NoteQuant3
+31 NoteQuant4
+[/NameDump]

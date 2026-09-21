@@ -1,0 +1,132 @@
+[Header]
+Version=Nord Modular patch 3.0
+0 127 0 127 1 0 0 8 4000 2 1 0 1 1 0 0 1 1 1 1 1 1 1 
+[/Header]
+[ModuleDump]
+1 1 9 1 0 
+2 13 1 6 
+3 13 2 6 
+4 13 0 6 
+5 13 1 18 
+6 13 2 18 
+7 19 1 28 
+12 4 2 30 
+13 84 0 10 
+15 84 1 10 
+16 20 0 22 
+17 20 1 22 
+18 20 2 22 
+19 1 0 0 
+20 84 2 10 
+24 13 0 18 
+28 94 1 30 
+[/ModuleDump]
+[CurrentNoteDump]
+64 64 64 64 64 64 64 64 64 64 64 64 64 64 64 64 64 64 64 64 64 64 64 64 64 64 64 
+[/CurrentNoteDump]
+[CableDump]
+1 3 2 0 0 1 1 1 
+3 3 0 0 2 0 0 
+3 5 0 0 3 0 0 
+3 6 0 0 5 0 0 
+3 24 0 0 5 0 0 
+3 4 0 0 2 0 0 
+0 5 1 0 15 1 1 
+0 6 1 0 20 1 1 
+0 7 0 0 16 1 1 
+0 7 1 0 17 1 1 
+0 7 2 0 18 1 1 
+0 12 0 0 28 0 1 
+0 12 1 0 28 1 1 
+2 13 0 0 19 1 1 
+2 15 0 0 13 0 0 
+2 17 1 0 15 0 0 
+2 20 0 0 15 0 0 
+2 18 1 0 20 0 0 
+2 16 1 0 13 0 0 
+0 13 1 0 4 0 1 
+0 15 1 0 2 0 1 
+0 16 0 0 24 0 1 
+0 17 0 0 5 0 1 
+0 18 0 0 6 0 1 
+0 20 1 0 3 0 1 
+0 24 1 0 13 1 1 
+3 28 0 0 7 0 1 
+[/CableDump]
+[ParameterDump]
+1 
+1 9 6 64 64 1 0 106 1 
+2 13 4 64 51 0 0 
+3 13 4 64 75 0 0 
+4 13 4 82 24 28 0 
+5 13 4 64 55 37 0 
+6 13 4 64 77 37 0 
+7 19 3 30 96 96 
+12 4 3 116 0 0 
+13 84 3 0 101 1 
+15 84 3 0 106 1 
+16 20 6 0 6 93 0 102 0 
+17 20 6 0 9 100 0 100 0 
+18 20 6 0 9 106 0 106 0 
+20 84 3 0 106 1 
+24 13 4 64 64 56 0 
+28 94 3 67 127 0 
+[/ParameterDump]
+[MorphMapDump]
+127 0 0 0 
+1 4 2 0 16 1 5 2 0 35 1 6 2 0 36 1 7 0 0 74 1 7 1 0 31 1 7 2 0 31 1 24 2 0 71 
+[/MorphMapDump]
+[KeyboardAssignment]
+1 0 0 0 
+[/KeyboardAssignment]
+[KnobMapDump]
+1 4 0 1 
+1 12 0 0 
+1 16 2 5 
+1 24 2 2 
+[/KnobMapDump]
+[CtrlMapDump]
+1 4 2 0 
+1 5 2 1 
+1 6 2 2 
+1 7 0 3 
+1 7 1 4 
+1 7 2 5 
+1 24 2 6 
+[/CtrlMapDump]
+[CustomDump]
+1 
+1 1 0 
+2 1 0 
+3 1 0 
+4 1 0 
+5 1 0 
+6 1 0 
+24 1 0 
+[/CustomDump]
+[NameDump]
+1 
+1 Peter Gorges
+2 Modulator1
+3 Modulator2
+4 Reed Decay
+5 Carrier 1
+6 Carrier 2
+7 
+12 Stereo Out
+13 AD-Env1
+15 AD-Env3
+16 Tone Env
+17 Carrier1Env
+18 Carrier2Env
+19 Classic DX
+20 AD-Env4
+24 Reed Tone
+28 StereoChorus
+[/NameDump]
+[Notes]
+DX Variation 1                                        by Peter Gorges - courtesy of www.wizoo.com
+
+based on ClassicDX
+
+[/Notes]
