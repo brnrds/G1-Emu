@@ -85,7 +85,7 @@ namespace g1app
 			{
 				const auto used = messageLength(pending, i);
 				if(used == 0)
-					break;	// incomplete: the rest is due on a later call
+					break;		// incomplete: the rest is due on a later call
 				port.out->sendMessageNow(juce::MidiMessage(pending.data() + i, static_cast<int>(used)));
 				i += used;
 			}
@@ -110,7 +110,7 @@ namespace g1app
 				for(size_t i = _at + 1; i < _b.size(); ++i)
 					if(_b[i] == 0xf7)
 						return i - _at + 1;
-				return 0;	// no terminator yet
+				return 0;		// no terminator yet
 			}
 			if(s >= 0xf8)
 				return 1;

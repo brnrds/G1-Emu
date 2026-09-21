@@ -8,6 +8,79 @@ Older entries cite their commit by hand.
 ## 2026-09-21
 
 - **macOS Monterey 12.7.6 Intel bring-up: local env doc, factory presets, launchers, Clavia updater tool (Cursor agent, macOS session).** Documented this machine's MacPorts/Xcode/CMake Release build (`-DG1_BACKEND=juce`, Gearmulator at `~/src/gearmulator-md-mm`, JUCE and NME paths under `~/Development/Animatek-NME`) in `docs/local-environment.md` for humans and agents; ROM stays gitignored and is validated with `g1Lib/g1rom.h` rules, with official Clavia updater packages kept under `Roms/official-updater/` as reference only. Added 211 electro-music factory `.pch` files under `patches/factory/` for editor upload tests. Added `tools/extract_clavia_update.py` to unpack Clavia updater payloads for analysis. Fixed `g1gui.sh` to launch the macOS `.app` bundle (`Contents/MacOS/G1-Emu`) when present and marked `g1.sh`/`g1gui.sh` executable. Runtime on this Mac: CoreAudio Built-in Output, CoreMIDI virtual **G1-Emu** ports (PC Port + MIDI). **Known issue:** Animatek NME reports no synth response when the PC Port reply truncates the **IAm** SysEx (7 bytes observed vs 12 expected); investigation points to PC Port TX firing before the complete SysEx is assembled. Verification: built Release on macOS Monterey Intel 4 GB RAM; `./g1gui.sh` starts the panel; audio and virtual MIDI ports appear; factory patches present for manual NME upload trials.
+- **`v0.1.0-alpha.3` published with the fixes proven on the first real Mac run (Codex, asked for
+  by Javier).** [The pre-release](https://github.com/animatek/G1-Emu/releases/tag/v0.1.0-alpha.3)
+  carries all five packages built from the tag: macOS universal, Windows x86-64, Linux x86-64
+  with both backends and Linux arm64. The tag's
+  [CI run](https://github.com/animatek/G1-Emu/actions/runs/35609561152) is green in all five build
+  jobs and in the release job. Verification after publication: downloaded
+  `G1-Emu-macos-universal.tar.gz`, its SHA-256 matches GitHub
+  (`03df3cee739eeb726e0ed243238f5702cc7a1862c4da9d7734559dd91f7403eb`), the archive contains
+  `G1-Emu.app`, `g1run`, README and licence, and both executables are Mach-O universal binaries
+  with x86-64 and arm64 slices.
+
+- **Release notes prepared for `v0.1.0-alpha.3` (Codex, asked for by Javier).** They now describe
+  the three fixes found on the first real Mac run -- the CoreAudio split-device hang, the `.app`
+  launcher path and truncated PC Port SysEx replies -- instead of claiming that nobody has run the
+  macOS build. They distinguish what was verified on Intel macOS 13.7.8 from Apple Silicon, which
+  still has CI coverage only. Verification: compared with the two merged fixes and the live Mac
+  results recorded immediately below; Markdown links and the release workflow's notes path checked.
+
+- **The JUCE MIDI backend dropped bytes out of the PC Port's own replies, breaking NME's
+  handshake (Claude, found live with NME on the same first Mac run).** With the two fixes above
+  in place, NME could see and open `G1-Emu PC Port`, but "Connect" still ended in "No response
+  from synth (timeout)" every time. An independent CoreMIDI probe (not NME, not the emulator's
+  own report) sending the exact bytes NME's *IAm* uses, `F0 33 00 06 00 03 03 F7`, showed why:
+  `g1run` answered with `F0 33 00 06 01 03 F7` (7 bytes) on the first try and
+  `F0 33 00 06 01 F7` (6 bytes) on a retry ten seconds later -- both short of the 12-byte reply
+  `NOTES.md` already documents (`F0 33 00 06 01 03 03 3F 7F 7F 01 F7`: sender, version, serial,
+  device ID), and shorter each time, worse under the heavier CPU load a second attempt landed
+  under. `EmuHost::run` drains the emulated DUART's transmit buffer every 2 ms of real time
+  (`app/emuhost.cpp`); a 12-byte SysEx reply can take the OS longer than that to finish writing,
+  so `JuceMidi::send` (`app/jucemidi.h`) could receive it in more than one call, mid-message. Its
+  `messageLength` had no way to say "not done yet": short of a real terminator it invented one --
+  returning what bytes had arrived as if they were the whole message ("unterminated: send what
+  there is") -- so a partial SysEx went out as a short, wrongly-terminated one, and the bytes
+  after it were misread as new messages starting on a stray data byte, which is not a valid
+  status byte and got silently dropped. The native ALSA backend never had this: `alsamidi.h` feeds
+  bytes one at a time through `snd_midi_event_encode_byte`, a decoder that already holds an
+  incomplete message across calls, which is exactly what was missing here. `JuceMidi` now keeps a
+  `pending` buffer per port and only calls `sendMessageNow` once `messageLength` reports a
+  complete message (0 means wait for the rest); an unfinished message can still arrive at CoreMIDI
+  split across more than one packet, which is ordinary SysEx transport and not this bug -- what
+  changes is that every byte the OS wrote is now in it, and in order, once whole. A message that
+  somehow never completes clears itself past 1 MB (the entire flash) rather than blocking a port
+  forever. Verification: the DSP test still passes; the same probe sending
+  `F0 33 00 06 00 03 03 F7` to a rebuilt `g1run` now gets back exactly
+  `F0 33 00 06 01 03 03 3F 7F 7F 01 F7`, split as `F0 33 00 06 01 03 03` then `3F 7F 7F 01 F7`
+  across two CoreMIDI packets but byte-for-byte and in order.
+
+- **`g1gui.sh` did not start the window on macOS (Claude, same first Mac run).** It execs the
+  binary at a fixed path next to the JUCE bundle, which is what Linux and Windows produce; on
+  macOS `g1gui` is a `.app` bundle instead, so that path is a directory and the script failed
+  with "No such file or directory". It now tries the bundle's own binary first
+  (`G1-Emu.app/Contents/MacOS/G1-Emu`) and falls back to the bare path, so the same script starts
+  the window on all three. Verification: ran on macOS 13.7.8 (Intel), where it now opens the
+  panel; the bare-path branch is unchanged, so Linux and Windows keep working as before.
+
+- **The default-device combiner deadlocked on an Intel Mac; `JuceAudio` no longer risks it
+  (Claude, first source build and run on a real Mac).** Built from source and run for the first
+  time on real hardware (a 2013-era Intel MacBook Pro, macOS 13.7.8): it booted, the DSP test
+  passed, and CoreMIDI created `G1-Emu PC Port` and `G1-Emu MIDI` exactly as expected -- checked
+  independently with a small CoreMIDI lister of its own, not just the emulator's self-report.
+  Sound did not: `initialiseWithDefaultDevices` hung forever inside JUCE's
+  `AudioIODeviceCombiner::start()`, because this Mac's default input and default output are two
+  different CoreAudio devices ("Built-in Microphone" and "Built-in Output", not one "Built-in"
+  device the way Apple Silicon Macs have it) and combining them deadlocks there -- a JUCE/CoreAudio
+  bug, not something to patch from here. `JuceAudio` now checks whether the two defaults are the
+  same device before ever asking for both; when they are not, it asks for the output alone and
+  drops the two inputs rather than risk the hang. The explicit-device path (`G1_AUDIO=<name>`, and
+  the settings window) had the mirror bug -- it asked for the same name on input and output, which
+  fails outright on a split-device Mac -- and now falls back to output-only there too.
+  Verification: built with a local CMake 3.31.9, Gearmulator `mdmm-v0.1.0-alpha.13` and JUCE
+  8.0.12; before the fix `g1run` hung indefinitely at `initialiseWithDefaultDevices`, after it
+  `audio: Built-in Output at 44100 Hz, 2 outputs, +36 dB` and the four DSPs run at ~100% real-time
+  speed with the flash freshly installed from the ROM.
 
 - **The window shows the PC Port byte counters (Claude, from the first macOS report).** The
   status bar named the two MIDI ports, which is the one thing you can already see in the editor.
